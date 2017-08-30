@@ -88,5 +88,9 @@
     &:after {
       transform: translate(-50%, -50%) rotate(135deg);
     }
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
