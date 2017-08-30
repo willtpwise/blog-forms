@@ -8,13 +8,13 @@ class BlogIntraForm {
     form.addEventListener('prefilled', (e) => {
       let lead = e.detail
       if (lead.SM_Blog__c) {
-        this.show()
+        this.hide()
       }
     })
   }
 
-  show () {
-    this.el.className = this.el.className.replace('intra-form--disabled', '')
+  hide () {
+    this.el.className += 'intra-form--disabled'
   }
 }
 

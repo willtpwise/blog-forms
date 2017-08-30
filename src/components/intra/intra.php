@@ -47,7 +47,6 @@ class BlogIntraForm extends BlogForm {
 
     $i = 1;
     $split = array();
-    $markup = '';
     for ($i = 0; $i < $nodes->length; $i++) {
       $html = $nodes[$i]->ownerDocument->saveHTML($nodes[$i]);
       if ($i < ($nodes->length / 2)) {
@@ -70,7 +69,7 @@ class BlogIntraForm extends BlogForm {
    */
   private function intra_form () {
     return "
-    <div class='intra-form intra-form--disabled' role='banner' aria-labelledby='intra-form-title'>
+    <div class='intra-form' role='banner' aria-labelledby='intra-form-title'>
       <h4 id='intra-form-title'>
         " . __("Want insights delivered straight to your inbox?", "blog_form") . "
       </h4>
