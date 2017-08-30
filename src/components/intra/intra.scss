@@ -27,15 +27,14 @@
     }
 
     .mktoFieldWrap {
-      margin: 0;
-      padding: 0 5px;
+      margin: 0 5px;
     }
 
     [data-field='FirstName'] .mktoFieldWrap {
-      padding-left: 0;
+      margin-left: 0;
     }
     .mktoButtonRow .mktoButtonWrap {
-      padding-left: 5px;
+      margin-left: 5px;
     }
 
     .mktoButton {
