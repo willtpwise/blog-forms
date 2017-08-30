@@ -10,7 +10,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "deploy": "yarn build && git add dist/* && git commit -m 'Deploy' && git push origin master",
+    "deploy": "yarn build && git add * --ignore-errors && git commit -m 'Deploy' && git push origin master",
     "config": "echo $1 > config/site.config",
     "dev": "rm -rf ./dist && webpack --watch --colors",
     "build": "rm -rf ./dist && NODE_ENV=production webpack --colors"
