@@ -95,9 +95,9 @@ class BlogForm {
   private function intra_form () {
     return "
     <div class='intra-form' role='banner' aria-labelledby='intra-form-title'>
-      <h3 id='intra-form-title'>
+      <h4 id='intra-form-title'>
         " . __("Want insights delivered straight to your inbox?", "blog_form") . "
-      </h3>
+      </h4>
       " . $this->form() . "
     </div>";
   }
