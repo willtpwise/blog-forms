@@ -21,7 +21,7 @@ class BlogForm {
    * @return Booleon indicating the evaluation
    */
   public function is_blog () {
-    return true; //defined('ADD_BLOG_FORM');
+    return defined('ADD_BLOG_FORM');
   }
 
   /**
