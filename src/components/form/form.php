@@ -4,7 +4,7 @@ class BlogForm {
   /**
    * Checks to see if the current page is a blog that needs a form
    *
-   * @return Booleon indicating the evaluation
+   * @return Bool indicating the evaluation
    */
   public function is_blog () {
     return defined('ADD_BLOG_FORM');
