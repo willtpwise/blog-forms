@@ -4,7 +4,7 @@ class BlogPopup {
   constructor (target) {
     this.el = false
     this.target = target
-    this.open()
+    // this.open()
   }
 
   open () {
