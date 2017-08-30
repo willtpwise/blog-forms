@@ -90,11 +90,11 @@ class BlogForm {
       </div>
       <form id='mktoForm_" . $this->form_id . "' class='mktoForm--lt'></form>
       <script>
-        /*MktoForms2.loadForm(
+        MktoForms2.loadForm(
           '//app-sn01.marketo.com',
           '994-UJA-976',
           " . $this->form_id . "
-        );*/
+        );
       </script>
     </div>";
   }
