@@ -4,6 +4,7 @@ class BlogPopup {
   constructor (target) {
     this.el = target
 
+    let form = this.el.querySelector('form')
     let close = this.el.querySelector('.popup-form-close')
     let underlay = this.el.querySelector('.popup-form-underlay')
 
@@ -15,12 +16,16 @@ class BlogPopup {
       this.close()
     })
 
-    setTimeout(() => {
-      this.autoOpen()
-    }, 3000)
+    form.addEventListener('prefilled', (e) => {
+      let lead = e.detail
+      if (!lead.SM_Blog__c) {
+        this.autoOpen()
+      }
+    })
   }
 
   open () {
+    console.log('open')
     if (!this.dismissed) {
       this.el.setAttribute('aria-live', 'assertive')
     }
