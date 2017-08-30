@@ -1,6 +1,6 @@
 import './popup.scss'
 
-class BlogPopup {
+class BlogPopupForm {
   constructor (target) {
     this.el = target
 
@@ -25,7 +25,6 @@ class BlogPopup {
   }
 
   open () {
-    console.log('open')
     if (!this.dismissed) {
       this.el.setAttribute('aria-live', 'assertive')
     }
@@ -60,6 +59,6 @@ class BlogPopup {
 document.addEventListener('DOMContentLoaded', () => {
   let form = document.querySelector('.popup-form')
   if (form) {
-    return new BlogPopup(form)
+    return new BlogPopupForm(form)
   }
 })
