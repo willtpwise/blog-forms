@@ -10,6 +10,7 @@
     "node": ">=6"
   },
   "scripts": {
+    "deploy": "yarn build && git add *",
     "config": "echo $1 > config/site.config",
     "dev": "rm -rf ./dist && webpack --watch --colors",
     "build": "rm -rf ./dist && NODE_ENV=production webpack --colors"
