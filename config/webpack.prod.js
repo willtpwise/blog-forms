@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const GenerateFilePlugin = require('generate-file-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 const srcDir = path.resolve(__dirname, '..', 'src')
 const distDir = path.resolve(__dirname, '..', 'dist')
@@ -36,8 +37,8 @@ module.exports = {
 
         loader: 'eslint-loader',
         options: {
-          emitWarning: true
-        }
+          emitWarning: true,
+        },
       },
       {
         test: /\.(scss|css)$/,

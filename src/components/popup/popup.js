@@ -1,6 +1,6 @@
 import './popup.scss'
 
-class Popup {
+class BlogPopup {
   constructor (target) {
     this.el = false
     this.target = target
@@ -57,5 +57,6 @@ class Popup {
 
 document.addEventListener('DOMContentLoaded', () => {
   let form = document.querySelector('.blog-form')
-  new Popup(form)
+  let popup = new BlogPopup(form)
+  return popup
 })
