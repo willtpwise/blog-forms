@@ -1,0 +1,50 @@
+@import '../../variables.scss';
+.wrap {
+  max-width: 2000px !important;
+}
+.intra-form {
+  background: $secondary;
+  color: #fff;
+  padding: 30px;
+  margin-bottom: 1em;
+
+  #intra-form-title {
+    color: #fff
+  }
+
+  .mktoForm {
+    display: flex;
+    flex-flow: row wrap;
+
+    [data-field='FirstName'],
+    [data-field='Email'] {
+      flex-basis: 40%;
+    }
+
+    .mktoButtonRow {
+      flex-basis: 20%;
+    }
+
+    .mktoFieldWrap {
+      padding: 0 5px;
+    }
+
+    [data-field='FirstName'] .mktoFieldWrap {
+      padding-left: 0;
+    }
+    .mktoButtonRow .mktoFieldWrap {
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      [data-field='FirstName'],
+      [data-field='Email'],
+      .mktoButtonRow {
+        flex-basis: 100%;
+        .mktoFieldWrap {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}

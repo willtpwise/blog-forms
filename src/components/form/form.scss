@@ -1,0 +1,7 @@
+@import '../../variables.scss';
+
+.blog-form {
+  [data-field='SM_Blog__c'] {
+    display: none;
+  }
+}

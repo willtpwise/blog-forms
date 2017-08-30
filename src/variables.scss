@@ -1,0 +1,59 @@
+$primary: #008bce !default;
+$primary_dark: darken($primary, 10%) !default;
+$primary_light: lighten($primary, 10%) !default;
+$primary_inverse: #fff !default;
+$primary_dark_inverse: #fff !default;
+$primary_light_inverse: $primary_dark !default;
+
+$secondary: #00344d !default;
+$secondary_dark: darken($secondary, 10%) !default;
+$secondary_light: lighten($secondary, 10%) !default;
+$secondary_inverse: #fff !default;
+$secondary_dark_inverse: #fff !default;
+$secondary_light_inverse: $secondary_dark !default;
+
+$danger: red !default;
+$danger_dark: darken($danger, 10%) !default;
+$danger_light: lighten($danger, 10%) !default;
+$danger_inverse: #fff !default;
+$danger_dark_inverse: #fff !default;
+$danger_light_inverse: $danger_dark !default;
+
+$warning: orange !default;
+$warning_dark: darken($warning, 10%) !default;
+$warning_light: lighten($warning, 10%) !default;
+$warning_inverse: #fff !default;
+$warning_dark_inverse: #fff !default;
+$warning_light_inverse: $warning_dark !default;
+
+$info: lightblue !default;
+$info_dark: darken($info, 10%) !default;
+$info_light: lighten($info, 10%) !default;
+$info_inverse: #fff !default;
+$info_dark_inverse: #fff !default;
+$info_light_inverse: $info_dark !default;
+
+$grey: #c3c3c3 !default;
+$grey_dark: darken($grey, 15%) !default;
+$grey_light: lighten($grey, 15%) !default;
+$grey_inverse: #000 !default;
+$grey_dark_inverse: #fff !default;
+$grey_light_inverse: #000 !default;
+
+$spacing: 1.5rem !default;
+$spacing_lg: 3rem !default;
+$spacing_sm: 1rem !default;
+$spacing_xs: 0.8rem !default;
+
+$radius: 3px !default;
+$radius_lg: 6px !default;
+
+$break_sm: 768px !default;
+$break_md: 998px !default;
+$break_lg: 1200px !default;
+
+$container: 900px !default;
+$container_sm: 600px !default;
+
+$body_background: #fff !default;
+$body_text: #000 !default;
