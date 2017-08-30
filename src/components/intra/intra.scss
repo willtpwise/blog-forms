@@ -9,7 +9,8 @@
   margin-bottom: 1em;
 
   #intra-form-title {
-    color: #fff
+    color: #fff;
+    margin: 0 0 10px 0;
   }
 
   .mktoForm {
@@ -34,6 +35,10 @@
     }
     .mktoButtonRow .mktoFieldWrap {
       padding-right: 0;
+    }
+
+    .mktoButton {
+      padding: 9px 20px;
     }
 
     @media screen and (max-width: 768px) {
