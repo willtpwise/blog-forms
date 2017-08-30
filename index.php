@@ -12,7 +12,7 @@ require_once __DIR__ . "/inc/dependencies.php";
 class BlogForm {
   public $form_id;
   function __construct () {
-    $this->form_id = 2008;
+    $this->form_id = 1188;
 
     add_filter('the_content', array($this, 'add'));
   }
@@ -85,7 +85,7 @@ class BlogForm {
   private function form () {
     return "
     <div class='blog-form'>
-      <div style='background:purple; height:300px;'>
+      <div style='background:purple; height:10px;'>
 
       </div>
       <form id='mktoForm_" . $this->form_id . "' class='mktoForm--lt'></form>
