@@ -1,7 +1,7 @@
 import './intra.scss'
 
 class BlogIntraForm {
-  constructor (target) { 
+  constructor (target) {
     this.el = target
     let form = this.el.querySelector('form')
 
