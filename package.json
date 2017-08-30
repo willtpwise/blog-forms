@@ -1,11 +1,11 @@
 {
-  "name": "pluginpack",
+  "name": "blogforms",
   "version": "0.0.0",
-  "description": "Pluginpack for Wordpress and Webpack",
+  "description": "Adds forms to the blog",
   "main": "src/index.js",
   "repository": {},
-  "author": "Will Wise <will@williamwise.net>",
-  "license": "WTFPL",
+  "author": "SiteMinder <webteam@siteminder.com>",
+  "license": "MIT",
   "engines": {
     "node": ">=6"
   },

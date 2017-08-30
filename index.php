@@ -2,7 +2,7 @@
 /*
   Plugin Name: Blog Forms
   Plugin URI: #
-  Description: #
+  Description: Adds forms to the blog
   Author: #
   Version: 0.0.0
 */
