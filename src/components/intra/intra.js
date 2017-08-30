@@ -14,7 +14,7 @@ class BlogIntraForm {
   }
 
   hide () {
-    this.el.className += ' intra-form--disabled'
+    this.el.className = this.el.className.replace('intra-form--disabled', '')
   }
 }
 
