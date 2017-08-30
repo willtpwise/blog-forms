@@ -20,20 +20,20 @@
     [data-field='FirstName'],
     [data-field='Email'] {
       flex-basis: 37.5%;
+      padding: 0 5px;
+      .mktoFieldWrap {
+        margin: 0;
+      }
     }
 
     .mktoButtonRow {
       flex-basis: 25%;
     }
 
-    .mktoFieldWrap {
-      margin: 0 5px;
-    }
-
-    [data-field='FirstName'] .mktoFieldWrap {
+    [data-field='FirstName'] {
       margin-left: 0;
     }
-    .mktoButtonRow .mktoButtonWrap {
+    .mktoButtonRow {
       margin-left: 5px;
     }
 
