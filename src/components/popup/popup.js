@@ -32,7 +32,7 @@ class BlogPopup {
   }
 
   autoOpen () {
-    let content = document.querySelector('.entry-content')
+    let content = document.querySelector('.post_content')
     let parent = content.parentNode
     let bodyRect = document.body.getBoundingClientRect()
     let elemRect = parent.getBoundingClientRect()
