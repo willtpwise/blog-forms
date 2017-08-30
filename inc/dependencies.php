@@ -8,7 +8,7 @@ add_action('wp_enqueue_scripts', function () {
   $env = $GLOBALS['PLUGIN_PACK_ENV'];
   $hash = $env['NODE'] === 'production' ? $env['HASH'] : 'dev';
   $name = $env['NAME'];
-  $path = str_replace(plugin_dir_url(__FILE__), '../', '/');
+  $path = $env['PLUGIN_DIR_URL'];
   wp_enqueue_script(
     $name,
     $path . 'dist/bundle.' . $hash . '.js'

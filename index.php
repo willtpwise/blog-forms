@@ -7,13 +7,12 @@
   Version: 0.0.0
 */
 require __DIR__ . "/inc/environment.php";
-require __DIR__ . "/inc/dependencies.php";
+require_once __DIR__ . "/inc/dependencies.php";
 
 class BlogForm {
   public $form_id;
   function __construct () {
     $this->form_id = 2008;
-    $this->instances = 0;
 
     add_filter('the_content', array($this, 'add'));
   }
@@ -38,10 +37,7 @@ class BlogForm {
       return $content;
     }
 
-    $this->instances ++;
-    if ($this->instances === 1) {
-      $this->enqueue();
-    }
+
 
     $content = $this->split($content);
     $form = $this->form();
@@ -82,14 +78,6 @@ class BlogForm {
   }
 
   /**
-   * Enqueues the blog forms static assets
-   */
-  private function enqueue () {
-    wp_enqueue_script('blog-form', plugin_dir_url(__FILE__) . '/assets/blog-form.js', array(), false, true);
-    wp_enqueue_style('blog-form', plugin_dir_url(__FILE__) . '/assets/blog-form.css');
-  }
-
-  /**
    * Returns the template for the form
    *
    * @return The HTML form content as a string
@@ -98,15 +86,15 @@ class BlogForm {
     return "
     <div class='blog-form'>
       <div style='background:purple; height:300px;'>
-      
+
       </div>
       <form id='mktoForm_" . $this->form_id . "' class='mktoForm--lt'></form>
       <script>
-        MktoForms2.loadForm(
+        /*MktoForms2.loadForm(
           '//app-sn01.marketo.com',
           '994-UJA-976',
           " . $this->form_id . "
-        );
+        );*/
       </script>
     </div>";
   }

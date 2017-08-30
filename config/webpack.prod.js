@@ -7,7 +7,6 @@ const srcDir = path.resolve(__dirname, '..', 'src')
 const distDir = path.resolve(__dirname, '..', 'dist')
 
 module.exports = {
-  context: srcDir,
 
   devtool: 'source-map',
 
@@ -71,7 +70,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'PRODUCTION': JSON.stringify(true)
     }),
-    new GenerateFilePlugin('../config/environment.json.js'),
+    new GenerateFilePlugin('config/environment.json.js'),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin('bundle.[hash].css')

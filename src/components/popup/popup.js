@@ -4,26 +4,25 @@ class Popup {
   constructor (target) {
     this.el = false
     this.target = target
+    this.open()
   }
 
   open () {
-    let content = this.clone(this.target)
-    this.build(content)
-    document.body.className += ' blog-popup-open'
+    this.marker = document.createElement('div')
+    this.target.parentNode.insertBefore(this.marker, this.target)
+    this.build()
+    this.el.setAttribute('aria-live', 'assertive')
   }
 
   close () {
-    document.body.className = document.body.className.replace(/ blog-popup-open/g, '')
+    this.marker.parentNode.insertBefore(this.target, this.marker)
+    this.el.setAttribute('aria-live', 'off')
     setTimeout(() => {
       this.el.parentNode.removeChild(this.el)
     }, 1000)
   }
 
-  clone (target) {
-    return target.cloneNode(true)
-  }
-
-  build (content) {
+  build () {
     let popup = document.createElement('div')
     let underlay = document.createElement('div')
     let body = document.createElement('div')
@@ -34,11 +33,12 @@ class Popup {
     body.className = 'popup-form-body'
     close.className = 'popup-form-close'
 
-    body.appendChild(content)
+    body.appendChild(this.target)
+    body.appendChild(close)
     popup.appendChild(underlay)
     popup.appendChild(body)
-    popup.appendChild(close)
 
+    popup.setAttribute('aria-live', 'assertive')
     close.setAttribute('aria-label', 'Close')
 
     underlay.addEventListener('click', () => {
