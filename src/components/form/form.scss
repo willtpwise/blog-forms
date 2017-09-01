@@ -30,8 +30,15 @@
 
     h4, p {
       color: inherit;
-      margin: auto 0;
+      margin: 0;
       width: 100%;
+    }
+
+    h4 {
+      margin-top: auto;
+    }
+    p {
+      margin-bottom: auto;
     }
   }
 
