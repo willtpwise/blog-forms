@@ -5,7 +5,7 @@ class BlogPopupForm {
     this.el = target
 
     let form = this.el.querySelector('form')
-    let close = this.el.querySelector('.popup-form-close')
+    let close = this.el.querySelector('.blog-form-close')
     let underlay = this.el.querySelector('.popup-form-underlay')
 
     close.addEventListener('click', (e) => {
@@ -18,10 +18,18 @@ class BlogPopupForm {
 
     form.addEventListener('prefilled', (e) => {
       let lead = e.detail
-      if (!lead.SM_Blog__c) {
-        this.autoOpen()
+      if (lead.SM_Blog__c) {
+        this.dismissed = true
       }
     })
+
+    document.addEventListener('blogSignUp', (e) => {
+      this.dismissed = true
+    })
+
+    setTimeout(() => {
+      this.autoOpen()
+    }, 4000);
   }
 
   open () {

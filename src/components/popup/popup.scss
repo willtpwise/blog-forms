@@ -55,6 +55,21 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    .popup-form-success {
+      background: inherit;
+      color: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      display: flex;
+      .popup-form-success-content {
+        margin: auto 20px;
+        text-align: center;
+      }
+    }
   }
   &[aria-live='assertive'] .popup-form-body {
     opacity: 1;

@@ -69,11 +69,12 @@ class BlogIntraForm extends BlogForm {
    */
   private function intra_form () {
     return "
-    <div class='intra-form' role='banner' aria-labelledby='intra-form-title'>
+    <div class='intra-form blog-form' role='banner' aria-labelledby='intra-form-title'>
       <h4 id='intra-form-title'>
         " . __("Want insights delivered straight to your inbox?", "blog_form") . "
       </h4>
-      " . $this->form() . "
+      " . $this->form(2075) . "
+      " . $this->thanks() . "
     </div>";
   }
 }

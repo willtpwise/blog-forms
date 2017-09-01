@@ -1,7 +1,70 @@
 @import '../../variables.scss';
 
 .blog-form {
+  position: relative;
+
+  // Hide the blog sign up field
   [data-field='SM_Blog__c'] {
     display: none;
+  }
+
+  .blog-form-success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    padding: 30px;
+    background: inherit;
+    color: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+
+    &[aria-live='assertive'] {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    h4, p {
+      color: inherit;
+      margin: auto 0;
+      width: 100%;
+    }
+  }
+
+  .blog-form-close {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    z-index: 100;
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: #fff;
+      height: 2px;
+      width: 1em;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }

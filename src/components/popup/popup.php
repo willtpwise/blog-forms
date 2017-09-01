@@ -23,14 +23,15 @@ class BlogPopupForm extends BlogForm {
    */
   public function popup_form () {
     return "
-    <div class='popup-form' aria-alive='off' aria-labelledby='popup-form-title'>
+    <div class='popup-form blog-form' aria-alive='off' aria-labelledby='popup-form-title'>
       <div class='popup-form-underlay'></div>
       <div class='popup-form-body'>
-        <a href='#' class='popup-form-close' aria-label='" . __("Close", "blog_forms") . "'></a>
+        <a href='#' class='blog-form-close' aria-label='" . __("Close", "blog_forms") . "'></a>
         <h3 id='popup-form-title'>
           " . __("Get insights sent straight to your inbox:", "blog_forms") . "
         </h3>
-        " . $this->form() . "
+        " . $this->form(2078) . "
+        " . $this->thanks() . "
       </div>
     </div>";
   }
