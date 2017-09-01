@@ -29,7 +29,7 @@ class BlogPopupForm {
 
     setTimeout(() => {
       this.autoOpen()
-    }, 4000);
+    }, 4000)
   }
 
   open () {
