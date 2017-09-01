@@ -35,6 +35,7 @@ class BlogPopupForm {
   open () {
     if (!this.dismissed) {
       this.el.setAttribute('aria-live', 'assertive')
+      this.el.querySelector('[name="FirstName"]').focus()
     }
   }
 
