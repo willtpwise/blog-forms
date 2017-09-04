@@ -21,8 +21,7 @@ class BlogIntraForm extends BlogForm {
     if (preg_match("/{{blog_form}}/", $content)) {
       $content = preg_replace("/{{blog_form}}/", $intra_form, $content);
     } else {
-      $content = $this->split($content);
-      $content = $content[0] . $intra_form . $content[1];
+      $content = $content . $intra_form;
     }
 
     return $content;
