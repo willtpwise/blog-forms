@@ -7,7 +7,6 @@
   Version: 0.0.0
 */
 require __DIR__ . "/inc/environment.php";
-require __DIR__ . "/inc/dependencies.php";
 
 require __DIR__ . "/src/components/form/form.php";
 require __DIR__ . "/src/components/popup/popup.php";
