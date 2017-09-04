@@ -28,40 +28,6 @@ class BlogIntraForm extends BlogForm {
   }
 
   /**
-   * Takes the content and splits it into based on the HTML structure
-   *
-   * @param $content: The HTML content to splits
-   * @return An array with two halves of the content.
-   */
-  public function split ($content) {
-    // We need a unique identifier – hence the 'woohoo' ;)
-    $content = "<div id='blog-form-woohoo'>$content</div>";
-    $dom = new DOMDocument();
-    $dom->preserveWhiteSpace = false;
-    libxml_use_internal_errors(true);
-    $dom->loadHTML($content);
-    $xpath = new DOMXPath($dom);
-    $obj = $xpath->query('//div[@id="blog-form-woohoo"]');
-    $nodes = $obj->item(0)->childNodes;
-
-    $i = 1;
-    $split = array();
-    for ($i = 0; $i < $nodes->length; $i++) {
-      $html = $nodes[$i]->ownerDocument->saveHTML($nodes[$i]);
-      if ($i < ($nodes->length / 2)) {
-        $split[0] .= $html;
-      } else {
-        $split[1] .= $html;
-      }
-    }
-
-    $split[0] = utf8_decode($split[0]);
-    $split[1] = utf8_decode($split[1]);
-
-    return $split;
-  }
-
-  /**
    * Returns the template for the form
    *
    * @return The HTML form content as a string
