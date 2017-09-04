@@ -1,17 +1,6 @@
 <?php
 
 class BlogForm {
-  public $intra_form_id;
-  public $popup_form_id;
-  function __construct () {
-    $this->intra_form_id = 2075;
-    $this->popup_form_id = 2078;
-
-    if ($this->is_blog()) {
-      require __DIR__ . "/inc/dependencies.php";
-    }
-  }
-
   /**
    * Checks to see if the current page is a blog that needs a form
    *

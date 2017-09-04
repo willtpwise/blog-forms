@@ -4,7 +4,7 @@ import './form.scss'
 class BlogForms {
   constructor () {
     this.forms = document.querySelectorAll('.blog-form form')
-    if (this.forms) {
+    if (this.forms.length) {
       this.load()
       this.signUp()
     }
