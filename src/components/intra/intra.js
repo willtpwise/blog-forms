@@ -38,7 +38,7 @@ class BlogIntraForm {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  let form = document.querySelector('.intra-form')
+  let form = document.querySelector('.intra-form.blog-form')
   if (form) {
     return new BlogIntraForm(form)
   }

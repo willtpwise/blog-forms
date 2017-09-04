@@ -66,7 +66,7 @@ class BlogPopupForm {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  let form = document.querySelector('.popup-form')
+  let form = document.querySelector('.popup-form.blog-form')
   if (form) {
     return new BlogPopupForm(form)
   }
