@@ -16,11 +16,11 @@ class BlogIntraForm extends BlogForm {
       return $content;
     }
 
-    $intra_form = $this->intra_form();
-
     if (preg_match("/{{blog_form}}/", $content)) {
+      $intra_form = $this->intra_form();
       $content = preg_replace("/{{blog_form}}/", $intra_form, $content);
     } else {
+      $intra_form = $this->intra_form(true);
       $content = $content . $intra_form;
     }
 
@@ -32,9 +32,9 @@ class BlogIntraForm extends BlogForm {
    *
    * @return The HTML form content as a string
    */
-  private function intra_form () {
+  private function intra_form ($shift = false) {
     return "
-    <div class='intra-form blog-form' role='banner' aria-labelledby='intra-form-title'>
+    <div class='intra-form blog-form' data-shift='" . $shift . "' role='banner' aria-labelledby='intra-form-title'>
       <h4 id='intra-form-title'>
         " . __("Want insights delivered straight to your inbox?", "blog_form") . "
       </h4>
